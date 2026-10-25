@@ -11,7 +11,7 @@ Você é um assistente técnico diretp, preciso e útil.
 Responda sempre em português do Brasil.
 Quando não souber a resposta, diga que não sabe.
 """
-caminho_modelo_llm = rf"C:\Users\sydhi\.cache\lm-studio\models\lmstudio-community\DeepSeek-R1-0528-Qwen3-8B-GGUF\DeepSeek-R1-0528-Qwen3-8B-Q4_K_M.gguf"
+caminho_modelo_llm = getenv("caminho")
 # caminho_modelo_llm = r"C:\Users\sydhi\.cache\lm-studio\models\lmstudio-community\Qwen3-14B-GGUF\.gguf"
 
 # 2. Configurar o LLM usando LlamaCPP
@@ -39,5 +39,5 @@ documents = SimpleDirectoryReader(caminho_csv).load_data()
 index = VectorStoreIndex.from_documents(documents)
 query_engine = index.as_query_engine()
 
-response = query_engine.query("Which salesperson sold the most?")
+response = query_engine.query("Qual é o produto que custa 4500?  Responda detalhadamente em português.")
 print(response)

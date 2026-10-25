@@ -1,0 +1,20 @@
+chainlit
+dotenv
+llama_index
+llama-index-core
+llama-index-readers-file
+llama-index-embeddings-huggingface
+transformers
+torch
+accelerate
+
+# Resolução do conflito de versão (Erro do Streamlit/HuggingFace)
+
+protobuf<7,>=3.20
+
+# Motor do LLM Local (LlamaCPP) e o conector do LlamaIndex
+# ATENÇÃO: Para habilitar a sua placa de vídeo AMD (Vulkan), você deve instalar
+# o llama-cpp-python usando o comando específico com a URL extra:
+# pip install llama-cpp-python --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/vulkan
+llama-cpp-python
+llama-index-llms-llama-cpp
